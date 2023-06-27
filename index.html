@@ -40,7 +40,8 @@
     
 <form >
     <h1></b>Welcome To AshuCodeTech </h1>
-    <table align="left" class="jumbotron">
+    <div id="regdiv">
+        <table class="jumbotron">
         <tr>
             <td>Name:</td>
             <td><input type="text" id="tbname" required><br></td>
@@ -58,8 +59,10 @@
             <td> <input type="submit" value="New User Register Here" onclick="registerUser()"><BR></td>
         </tr>
     </table>
+</div>
 
-    <table align="right" class="jumbotron">
+<div id="logindiv">
+    <table class="jumbotron">
         
         <tr>
             <td> email:</td>
@@ -74,6 +77,7 @@
             <td> <input type="submit" value="Existing User Login Here" onclick="login()"><BR></td>
         </tr>
     </table>
+</div>
 </form>
 
 </body>
