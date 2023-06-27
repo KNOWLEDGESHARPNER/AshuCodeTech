@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StoringUserDataInBrowserCache</title>
+    <style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear 3000;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+  <script>
+
+    function registerUser()
+    {
+    debugger;
+      email=document.getElementById("regemail").value
+      password=document.getElementById("regpwd").value
+      name=document.getElementById("tbname").value
+
+      u=localStorage.setItem("reg_username",email);
+      p=localStorage.setItem("reg_pwd",password);
+      n=localStorage.setItem("name",name);
+      document.write("User registration Done Successfully!!!!"+'<br>')
+      document.getElementById("div1")
+      document.write("Loading Your Login Page!!!!")
+     setTimeout(myFunction, 3000)
+    }
+    function myFunction()
+    {
+        location.replace("login.html")
+    }
+
+  </script>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="tbname"><br></td>
+        </tr>
+        <tr>
+            <td> email:</td>
+            <td> <input type="email" id="regemail"><br></td>
+        </tr>
+        <tr>
+            <td> password:</td>
+            <td><input type="password" id="regpwd"><br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" value="New User Register Here" onclick="registerUser()"><BR></td>
+        </tr>
+    </table>
+    
+</form>
+
+</body>
+</html>
