@@ -3,17 +3,3 @@ body
       background-image: url('Logo.png');
 }
 
-#regdiv
-{
-      width:45%;
-      background-color:Blue;
-      border:10px groove pink;
-      float:left;
-}
-#logindiv
-{
-      width:45%;
-      background-color:pink;
-      border:10px groove blue;
-      float:right;
-}
