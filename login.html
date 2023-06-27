@@ -13,7 +13,6 @@
     <script>
         function login()
         {
-        debugger;
           email=document.getElementById("tbemail").value
           password=document.getElementById("tbpwd").value
           let reg_username=localStorage.getItem("reg_username")
@@ -22,12 +21,22 @@
           if(reg_username==email && reg_pwd==password)
           {
             document.write("Welcome " +reg_name +"<br> login sucess")
+              loginSuccess()
           }
           else
           {
           document.write("Login failed")
+              loginFailure()
           }
         }
+         function loginSuccess()
+        {
+        location.assign("loginSuccess.html")
+        }
+         function loginFailure()
+        {
+        location.assign("loginFailure.html")
+         }
     </script>
 </head>
 <body>
