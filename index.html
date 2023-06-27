@@ -29,11 +29,6 @@
     {
         location.replace("login.html")
     }
-    function login()
-    {
-           document.write("Loading Your Login Page!!!!")
-           location.replace("login.html") 
-    }
   </script>
 </head>
 <body>
@@ -41,7 +36,7 @@
 <form >
     <h1></b>Welcome To AshuCodeTech </h1>
     <div id="regdiv">
-        <table class="jumbotron">
+        <table align="center" class="jumbotron">
         <tr>
             <td>Name:</td>
             <td><input type="text" id="tbname" required><br></td>
@@ -59,24 +54,7 @@
             <td> <input type="submit" value="New User Register Here" onclick="registerUser()"><BR></td>
         </tr>
     </table>
-</div>
-
-<div id="logindiv">
-    <table class="jumbotron">
-        
-        <tr>
-            <td> email:</td>
-            <td> <input type="email" id="email" required><br></td>
-        </tr>
-        <tr>
-            <td> password:</td>
-            <td><input type="password" id="pwd" required><br></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td> <input type="submit" value="Existing User Login Here" onclick="login()"><BR></td>
-        </tr>
-    </table>
+    <a href="login.html"> Existing User Login here</a>    
 </div>
 </form>
 
