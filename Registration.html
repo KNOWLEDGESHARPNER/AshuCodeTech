@@ -68,12 +68,18 @@
             })
             localStorage.setItem("users",JSON.stringify(user_records))
         }
-        user_count=0
-        users=localStorage.getItem("users")
-        user_count=users.length;
-        console.info("Congratulations!!! your the " +user_count+ " user of our website" )
-        window.location.href="index.html";
-    }
+let userCount = 0;
+const users = localStorage.getItem("users");
+
+if (users) {
+  const parsedUsers = JSON.parse(users);
+  userCount = parsedUsers.length;
+}
+
+console.info("Congratulations!!! You are the " + userCount + " user of our website.");
+
+window.location.href="index.html";
+}
     function ResetData()
     {
         window.location.href="Registration.html";
