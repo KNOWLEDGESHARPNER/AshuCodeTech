@@ -71,7 +71,7 @@
         user_count=0
         users=localStorage.getItem("users")
         user_count=users.length;
-        document.write("Congratulations!!! your the " +user_count+ " user of our website" )
+        setTimeout(document.write("Congratulations!!! your the " +user_count+ " user of our website" ),3000);
         window.location.href="index.html";
     }
     function ResetData()
