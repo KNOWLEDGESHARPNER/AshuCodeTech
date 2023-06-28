@@ -3,7 +3,7 @@ body
       background-image: url('Logo.png');
 }
 
-h1,h3
+h1,h3,center
 {
       color:white;
 }
