@@ -61,6 +61,10 @@
             alert("Login fail!!!")
         }
     }
+        function open_register()
+        {
+            window.location.href="Registration.html";
+        }
     </script>
 </head>
 <body>
@@ -78,7 +82,9 @@
                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter email">
                 </div>
                 <div class="text-center">
-                    <button type="button" id="login_btn" onclick="login()" class="btn btn-primary">Login</button>
+                    <button type="button" id="login_btn" onclick="login()" class="btn btn-primary">Login</button><br>
+                    <h5>Don't you have account? Create here</h5>
+                    <button type="button" id="Reg_btn" onclick="open_register()" class="btn btn-primary">Login</button>
                 </div>
             </form>
         </div>
