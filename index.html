@@ -3,63 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <script>
-        function login()
-        {
-            debugger;
-          email=document.getElementById("tbemail").value
-          password=document.getElementById("tbpwd").value
-          let reg_username=localStorage.getItem("reg_username")
-          let reg_pwd=localStorage.getItem("reg_pwd")
-          let reg_name=localStorage.getItem("name")
-          if(reg_username==email && reg_pwd==password)
-          {
-            document.write("Welcome " +reg_name +"<br> login sucess")
-              loginSuccess()
-          }
-          else
-          {
-          document.write("Login failed")
-              loginFailure()
-          }
+        // function login()
+        // {
+        //     debugger;
+        //   email=document.getElementById("tbemail").value
+        //   password=document.getElementById("tbpwd").value
+        //   let reg_username=localStorage.getItem("reg_username")
+        //   let reg_pwd=localStorage.getItem("reg_pwd")
+        //   let reg_name=localStorage.getItem("name")
+        //   if(reg_username==email && reg_pwd==password)
+        //   {
+        //     document.write("Welcome " +reg_name +"<br> login sucess")
+        //       loginSuccess()
+        //   }
+        //   else
+        //   {
+        //   document.write("Login failed")
+        //       loginFailure()
+        //   }
+        // }
+        //  function loginSuccess()
+        // {
+        // location.assign("loginSuccess.html")
+        // }
+        //  function loginFailure()
+        // {
+        // location.assign("loginFailure.html")
+        //  }
+    
+    function login()
+    {
+        let email,password;
+        email=document.getElementById("email").value;
+        password=document.getElementById("password").value;
+
+        let user_records=new Array();
+
+        user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+        if(user_records.some((v)=>{
+            return v.email==email && v.password==password
+        })){
+            alert("Login Sucessful")
+            let current_user=user_records.filter((v)=>{
+                return v.email==email && v.password==password
+            })[0]
+            localStorage.setItem("name",current_user.name);
+            localStorage.setItem("email",current_user.email);
+            window.location.href="profile.html";
         }
-         function loginSuccess()
-        {
-        location.assign("loginSuccess.html")
+        else{
+            alert("Login fail!!!")
         }
-         function loginFailure()
-        {
-        location.assign("loginFailure.html")
-         }
+    }
     </script>
 </head>
 <body>
-<form >
-    <center><h1>Welcome To AshuCodeTech </h1></center>
-     <table width="75%" align="center" class="jumbotron" cellpadding="10">
-         <tr>
-             <td align="right">UserName:</td>
-             <td><input type="email" id="tbemail" placeholder="Enter your registered email" size="75"><br></td>
-         </tr>
-        <tr>
-             <td align="right">PassWord:</td>
-            <td><input type="password" id="tbpwd" placeholder="Enter your registered pssword" size="75"><br></td>
-        </tr>
-      <tr>
-          <td></td>
-          <td><input type="submit" value="Login" onclick="login()" style="background-color:green;color:white">
-      </td>
-      </tr>
-        <tr>
-                <td></td>
-                <td> <a href="Registration.html"> New User Register here</a></td>
-            </tr>
-    </table>
-
-</form>
-
+    <div class="container">
+        <div class="card">
+            <h2>Login Form</h2>
+            <form action="#">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter email">
+                </div>
+                <div class="text-center">
+                    <button type="button" id="login_btn" onclick="login()" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
