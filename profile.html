@@ -31,6 +31,17 @@
             </h5>
         </div>
     </div>
+    <h1>Welcome To AshuCodeTech</h1>
+<h3>Choose your self-paced course and Enhance your coding skills</h3>
+<select id="ddlcourse">
+    <option value="select">---select---</option>
+    <option value="python">python</option>
+    <option value=".Net">.Net</option>
+    <option value="WebTech">WebTech</option>
+</select>
+
+<input type="submit" value="Click To Open Selected Course" onclick="open_course()"><br><br>
+<input type="submit" value="Go To HomePage" onclick="home()">
 </body>
 <script>
     function logout()
@@ -39,5 +50,27 @@
         localStorage.removeItem("email");
         window.location.href="index.html";
     }
+     <script>
+        function home()
+        {
+            location.assign("index.html")
+        }
+        function open_course()
+        {
+            var selected_course=document.getElementById('ddlcourse').value
+            if(selected_course=="python")
+            {
+                location.assign("https://www.youtube.com/playlist?list=PLCkmmeBeny45dUiHbnv9di6XfOj37CCTL");
+            }
+            else if(selected_course==".Net")
+            {
+                location.assign("https://www.youtube.com/playlist?list=PLCkmmeBeny45dUiHbnv9di6XfOj37CCTL");
+            }
+            else if(selected_course=="WebTech")
+            {
+                location.assign("https://drive.google.com/drive/folders/1aOQOdNPw1fvp2BFKWgRzrBAwyIeUamUY?usp=sharing");
+            }
+        }
+    </script>
 </script>
 </html>
