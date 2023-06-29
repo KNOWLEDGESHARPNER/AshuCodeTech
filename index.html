@@ -9,34 +9,7 @@
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <script>
-        // function login()
-        // {
-        //     debugger;
-        //   email=document.getElementById("tbemail").value
-        //   password=document.getElementById("tbpwd").value
-        //   let reg_username=localStorage.getItem("reg_username")
-        //   let reg_pwd=localStorage.getItem("reg_pwd")
-        //   let reg_name=localStorage.getItem("name")
-        //   if(reg_username==email && reg_pwd==password)
-        //   {
-        //     document.write("Welcome " +reg_name +"<br> login sucess")
-        //       loginSuccess()
-        //   }
-        //   else
-        //   {
-        //   document.write("Login failed")
-        //       loginFailure()
-        //   }
-        // }
-        //  function loginSuccess()
-        // {
-        // location.assign("loginSuccess.html")
-        // }
-        //  function loginFailure()
-        // {
-        // location.assign("loginFailure.html")
-        //  }
-    
+       
     function login()
     {
         let email,password;
@@ -83,7 +56,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter email">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
                 </div>
                 <div class="text-center">
                     <button type="button" id="login_btn" onclick="login()" class="btn btn-primary">Login</button><br>
