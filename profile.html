@@ -38,16 +38,14 @@
         </div>
     <div class="card" style="border:10px groove green;float:right;width:70%">
          <h3>Choose your self-paced course and Enhance your coding skills</h3>
-        <select id="ddlcourse" style="">
+        <select id="ddlcourse" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <option value="select">---select---</option>
             <option value="python">python</option>
             <option value=".Net">.Net</option>
             <option value="WebTech">WebTech</option>
         </select>
         <button class="btn btn-info" onclick="open_course()">Click To Open Selected Course</button>
-    
-    </div>
-<div class="spinner-grow text-primary" role="status">
+    <div class="spinner-grow text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 <div class="spinner-grow text-secondary" role="status">
@@ -72,6 +70,8 @@
   <span class="visually-hidden">Loading...</span>
 </div>
         
+    </div>
+
     </div>
     
 </body>
