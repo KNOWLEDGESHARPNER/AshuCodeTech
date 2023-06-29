@@ -14,8 +14,8 @@
     
     <div class="container">
        
-        <div class="card">
-             <img src="Logo.png" alt="Your Logo" />
+        <div class="card" style="float:left;width:20%;">
+             <img src="Logo.png" alt="Your Logo" style="width: 20%;height: 20%; float:lef;t"/>
             <h1>Welcome To AshuCodeTech</h1>
 <!--             <h2>Profile Page</h2> -->
             <button class="btn btn-info" onclick="logout()" style="float:right;">Logout</button>
@@ -34,15 +34,18 @@
                 </script>
             </h5>
             <h3>Choose your self-paced course and Enhance your coding skills</h3>
-<select id="ddlcourse">
-    <option value="select">---select---</option>
-    <option value="python">python</option>
-    <option value=".Net">.Net</option>
-    <option value="WebTech">WebTech</option>
-</select>
-<button class="btn btn-info" onclick="open_course()" style="float:right;">Click To Open Selected Course</button>
 
         </div>
+    <div class="card" style="float:right;width:70%">
+        <select id="ddlcourse">
+            <option value="select">---select---</option>
+            <option value="python">python</option>
+            <option value=".Net">.Net</option>
+            <option value="WebTech">WebTech</option>
+        </select>
+        <button class="btn btn-info" onclick="open_course()" style="float:right;">Click To Open Selected Course</button>
+
+    </div>
         
     </div>
     
